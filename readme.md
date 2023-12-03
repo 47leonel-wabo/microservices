@@ -4,3 +4,8 @@
 
 - Product service (reactive web, reactive mongodb)
 - Order service
+
+
+## Architecture
+
+![architecture](./screenshots/high_level_architecture.png)
