@@ -31,13 +31,15 @@ public record ProductService(ProductRepository productRepository) {
     }
 
     public Mono<ProductResponseDto> updateProduct(final String productId, final Mono<ProductRequestDto> requestDto) {
-        return this.productRepository.findById(productId)
-                .map(product -> new Product(product.id(), product.name(), product.price()))
-                .doOnNext(this.productRepository::save)
-                .map(EntityToDto::toProductResponseDto);
+        return requestDto.flatMap(
+                dto -> productRepository.findById(productId)
+                        .map(product -> new Product(productId, dto.name(), dto.price()))
+                        .flatMap(productRepository::save)
+                        .map(EntityToDto::toProductResponseDto));
     }
 
     public Mono<Void> deleteProductById(final String id) {
-        return this.productRepository.deleteById(id);
+        return this.productRepository.findById(id)
+                .flatMap(this.productRepository::delete);
     }
 }
