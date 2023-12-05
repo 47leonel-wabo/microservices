@@ -3,7 +3,7 @@
 ## Services
 
 - Product service (reactive web, reactive mongodb)
-- Order service
+- User service
 
 
 ## Architecture
