@@ -1,1 +1,15 @@
 services:
+  # Mongodb
+  mongodb:
+    container_name: my_mongodb
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongodb:/data/db
+  # Mongo-Express
+  mongoexpress:
+    container_name: my_mongoexpress
+    image: mongo-express
+    ports:
+      - 9090:9090
