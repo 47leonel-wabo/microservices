@@ -5,6 +5,7 @@ import com.wbt.productservice.dto.ProductResponseDto;
 import com.wbt.productservice.entity.Product;
 import com.wbt.productservice.repository.ProductRepository;
 import com.wbt.productservice.util.EntityToDto;
+import org.springframework.data.domain.Range;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -41,5 +42,11 @@ public record ProductService(ProductRepository productRepository) {
     public Mono<Void> deleteProductById(final String id) {
         return this.productRepository.findById(id)
                 .flatMap(this.productRepository::delete);
+    }
+
+    public Flux<ProductResponseDto> getByPriceRange(final Double minPrice, final Double maxPrice) {
+        return this.productRepository
+                .findByPriceBetween(Range.closed(minPrice, maxPrice))
+                .map(EntityToDto::toProductResponseDto);
     }
 }
