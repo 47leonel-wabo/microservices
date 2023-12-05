@@ -5,6 +5,7 @@ import com.wbt.productservice.dto.ProductResponseDto;
 import com.wbt.productservice.entity.Product;
 import com.wbt.productservice.repository.ProductRepository;
 import com.wbt.productservice.util.EntityToDto;
+import org.springframework.data.domain.Range;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -31,13 +32,21 @@ public record ProductService(ProductRepository productRepository) {
     }
 
     public Mono<ProductResponseDto> updateProduct(final String productId, final Mono<ProductRequestDto> requestDto) {
-        return this.productRepository.findById(productId)
-                .map(product -> new Product(product.id(), product.name(), product.price()))
-                .doOnNext(this.productRepository::save)
-                .map(EntityToDto::toProductResponseDto);
+        return requestDto.flatMap(
+                dto -> productRepository.findById(productId)
+                        .map(product -> new Product(productId, dto.name(), dto.price()))
+                        .flatMap(productRepository::save)
+                        .map(EntityToDto::toProductResponseDto));
     }
 
     public Mono<Void> deleteProductById(final String id) {
-        return this.productRepository.deleteById(id);
+        return this.productRepository.findById(id)
+                .flatMap(this.productRepository::delete);
+    }
+
+    public Flux<ProductResponseDto> getByPriceRange(final Double minPrice, final Double maxPrice) {
+        return this.productRepository
+                .findByPriceBetween(Range.closed(minPrice, maxPrice))
+                .map(EntityToDto::toProductResponseDto);
     }
 }

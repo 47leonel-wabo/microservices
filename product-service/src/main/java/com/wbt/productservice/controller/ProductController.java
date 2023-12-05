@@ -23,6 +23,12 @@ public record ProductController(ProductService productService) {
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
 
+    @GetMapping(path = {"/price"})
+    public Flux<ProductResponseDto> getByPriceRange(final @RequestParam("max") Double max,
+                                                    final @RequestParam("min") Double min) {
+        return this.productService.getByPriceRange(min, max);
+    }
+
     @PostMapping
     public Mono<ProductResponseDto> save(final @RequestBody Mono<ProductRequestDto> requestDto) {
         return this.productService.addProduct(requestDto);
