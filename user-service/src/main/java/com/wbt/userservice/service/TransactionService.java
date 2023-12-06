@@ -6,6 +6,7 @@ import com.wbt.userservice.entity.Transaction;
 import com.wbt.userservice.repository.TransactionRepository;
 import com.wbt.userservice.repository.UserRepository;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.time.LocalDateTime;
@@ -30,6 +31,10 @@ public record TransactionService(TransactionRepository transactionRepository, Us
                         // (5) if it were impossible to perform (1), return response with status DECLINED
                         .defaultIfEmpty(new UserTransactionResponseDto(dto.userId(), dto.amount(), DECLINED))
         );
+    }
+
+    public Flux<Transaction> getUserTransactions(final Long id) {
+        return this.transactionRepository.fetchUserTransactions(id);
     }
 
 }
