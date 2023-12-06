@@ -3,7 +3,7 @@
 ## Services
 
 - Product service (reactive web, reactive mongodb)
-- User service
+- User service (R2DBC, H2 (dev))
 
 
 ## Architecture
