@@ -23,7 +23,7 @@ public record TransactionService(TransactionRepository transactionRepository, Us
                         // (2) if done successfully proceed
                         .filter(aBoolean -> aBoolean)
                         // (3) create new transaction with no ID (e.i. 0) and create it
-                        .map(aBoolean -> new Transaction(0L, dto.userId(), dto.amount(), LocalDateTime.now()))
+                        .map(aBoolean -> new Transaction(null, dto.userId(), dto.amount(), LocalDateTime.now()))
                         .flatMap(this.transactionRepository::save)
                         // (4) return an APPROVED transaction response dto
                         .map(transaction -> new UserTransactionResponseDto(transaction.userId(), transaction.amount(), APPROVED))

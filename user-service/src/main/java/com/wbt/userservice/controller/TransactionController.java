@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping(path = {"/transactions"})
+@RequestMapping(path = {"/user/transactions"})
 public record TransactionController(TransactionService transactionService) {
     @PostMapping
     Mono<UserTransactionResponseDto> perform(final @RequestBody Mono<UserTransactionRequestDto> requestDtoMono) {
