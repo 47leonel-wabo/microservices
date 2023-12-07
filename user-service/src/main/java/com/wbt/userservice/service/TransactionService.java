@@ -6,6 +6,7 @@ import com.wbt.userservice.entity.Transaction;
 import com.wbt.userservice.repository.TransactionRepository;
 import com.wbt.userservice.repository.UserRepository;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.time.LocalDateTime;
@@ -23,13 +24,17 @@ public record TransactionService(TransactionRepository transactionRepository, Us
                         // (2) if done successfully proceed
                         .filter(aBoolean -> aBoolean)
                         // (3) create new transaction with no ID (e.i. 0) and create it
-                        .map(aBoolean -> new Transaction(0L, dto.userId(), dto.amount(), LocalDateTime.now()))
+                        .map(aBoolean -> new Transaction(null, dto.userId(), dto.amount(), LocalDateTime.now()))
                         .flatMap(this.transactionRepository::save)
                         // (4) return an APPROVED transaction response dto
                         .map(transaction -> new UserTransactionResponseDto(transaction.userId(), transaction.amount(), APPROVED))
                         // (5) if it were impossible to perform (1), return response with status DECLINED
                         .defaultIfEmpty(new UserTransactionResponseDto(dto.userId(), dto.amount(), DECLINED))
         );
+    }
+
+    public Flux<Transaction> getUserTransactions(final Long id) {
+        return this.transactionRepository.fetchUserTransactions(id);
     }
 
 }

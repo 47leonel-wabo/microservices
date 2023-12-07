@@ -36,10 +36,8 @@ public record UserController(UserService userService) {
 
 
     @DeleteMapping(path = {"/{id}"})
-    public Mono<ResponseEntity<Void>> delete(final @PathVariable(name = "id") Long id) {
-        return this.userService.delete(id)
-                .map(ResponseEntity::ok)
-                .defaultIfEmpty(ResponseEntity.badRequest().build());
+    public Mono<Void> delete(final @PathVariable(name = "id") Long id) {
+        return this.userService.delete(id);
     }
 
 }
