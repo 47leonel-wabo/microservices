@@ -3,7 +3,9 @@
 ## Services
 
 - Product service (reactive web, reactive mongodb)
-- User service (R2DBC, H2 (dev))
+- User service (R2DBC)
+  * dev environment with H2
+  * prod environment with postgres
 
 
 ## Architecture
