@@ -4,34 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="023be3d6-546c-4a60-a9dd-f27da8b30c68" name="Changes" comment="Order service - Initial commit, project setup">
-      <change afterPath="$PROJECT_DIR$/clients/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/OrderRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/OrderResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/RequestContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/product/ProductRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/product/ProductResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/user/TransactionStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/user/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/user/UserTransactionRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/user/UserTransactionResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/util/OrderStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="023be3d6-546c-4a60-a9dd-f27da8b30c68" name="Changes" comment="Order service - project structure -&gt;Go for clients module">
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/entity/PurchaseOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/microservices.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/microservices.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/microservices/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/microservices/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/microservices/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/microservices/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/microservices/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/microservices/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/microservices/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/org/wbt/eco/clients/product/ProductRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/product/ProductRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/org/wbt/eco/clients/product/ProductResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/product/ProductResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/org/wbt/eco/clients/user/TransactionStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/user/TransactionStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/org/wbt/eco/clients/user/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/user/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/org/wbt/eco/clients/user/UserTransactionRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/user/UserTransactionRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/org/wbt/eco/clients/user/UserTransactionResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/user/UserTransactionResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/RequestContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/RequestContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="clients" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,14 +64,18 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "order-service",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/home/ddok/Documents/SP3/reactive/microservices/order-service/src/main/java/com/wbt/orderservice/dto/user",
+    "last_opened_file_path": "/home/ddok/Documents/SP3/reactive/microservices/order-service/src/main/java/com/wbt/orderservice/dto",
     "onboarding.tips.debug.path": "/home/ddok/Documents/SP3/reactive/microservices/clients/src/main/java/org/wbt/eco/clients/Main.java"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto" />
       <recent name="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/user" />
       <recent name="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/product" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto" />
     </key>
   </component>
   <component name="RunManager">
@@ -104,6 +94,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OrderServiceApplication" />
         <item itemvalue="Application.OrderServiceApplication" />
       </list>
     </recent_temporary>
@@ -125,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701943860991</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Order service - project structure -&gt;Go for clients module">
+      <option name="closed" value="true" />
+      <created>1701946013961</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701946013961</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,17 +140,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Order service - Initial commit, project setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Order service - Initial commit, project setup" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/clients/src/main/java/org/wbt/eco/clients/Main.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Order service - project structure -&gt;Go for clients module" />
+    <option name="LAST_COMMIT_MESSAGE" value="Order service - project structure -&gt;Go for clients module" />
   </component>
 </project>
