@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="023be3d6-546c-4a60-a9dd-f27da8b30c68" name="Changes" comment="Order service - Implementing the n-tier architecture">
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
+    <list default="true" id="023be3d6-546c-4a60-a9dd-f27da8b30c68" name="Changes" comment="Order service - Defining other service url">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,13 +35,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 0
+}]]></component>
   <component name="ProjectId" id="2ZD4wXmsDjOmQZvXAfQ473PqvGk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -53,8 +50,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "order-service",
     "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/ddok/Documents/SP3/reactive/microservices/order-service/src/main/java/com/wbt/orderservice/dto",
-    "onboarding.tips.debug.path": "/home/ddok/Documents/SP3/reactive/microservices/clients/src/main/java/org/wbt/eco/clients/Main.java"
+    "onboarding.tips.debug.path": "/home/ddok/Documents/SP3/reactive/microservices/clients/src/main/java/org/wbt/eco/clients/Main.java",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -121,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701976338005</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Order service - Defining other service url">
+      <option name="closed" value="true" />
+      <created>1701976590422</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701976590422</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,6 +146,7 @@
     <MESSAGE value="Order service - Initial commit, project setup" />
     <MESSAGE value="Order service - project structure -&gt;Go for clients module" />
     <MESSAGE value="Order service - Implementing the n-tier architecture" />
-    <option name="LAST_COMMIT_MESSAGE" value="Order service - Implementing the n-tier architecture" />
+    <MESSAGE value="Order service - Defining other service url" />
+    <option name="LAST_COMMIT_MESSAGE" value="Order service - Defining other service url" />
   </component>
 </project>
