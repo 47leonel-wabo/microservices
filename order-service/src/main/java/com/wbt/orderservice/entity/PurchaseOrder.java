@@ -14,13 +14,13 @@ public class PurchaseOrder {
     private Long id;
     private String productId;
     private Long userId;
-    private Boolean amount;
+    private Double amount;
     private OrderStatus status;
 
     public PurchaseOrder() {
     }
 
-    public PurchaseOrder(String productId, Long userId, Boolean amount, OrderStatus status) {
+    public PurchaseOrder(String productId, Long userId, Double amount, OrderStatus status) {
         this.productId = productId;
         this.userId = userId;
         this.amount = amount;
@@ -75,11 +75,11 @@ public class PurchaseOrder {
         this.userId = userId;
     }
 
-    public Boolean getAmount() {
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(Boolean amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
     }
 
