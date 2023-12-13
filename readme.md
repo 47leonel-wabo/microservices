@@ -12,6 +12,18 @@ Spring Boot project constituted of three services, in which two are builded on r
   * prod environment with postgres
 - Order service (JPA) blocking - will use some reactive techniques to mitigate the blocking effect
 
+## Technologies
+
+* Spring Boot 3.x
+* JPA
+* Spring Web
+* Spring WebFlux
+* H2
+* Mongodb
+* PostgreSQL
+* R2DBC
+* Java
+* Linux
 
 ## Architecture
 

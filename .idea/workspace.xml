@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="023be3d6-546c-4a60-a9dd-f27da8b30c68" name="Changes" comment="Order service - Perform order action">
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/client/UserClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/service/OrderFullfilmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/service/OrderFulfillmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="023be3d6-546c-4a60-a9dd-f27da8b30c68" name="Changes" comment="Exclude useless files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +52,7 @@
     "Application.UserServiceApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "order-service",
+    "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/ddok/Documents/SP3/reactive/microservices/order-service/src/main/java/com/wbt/orderservice/dto",
@@ -178,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702122208700</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Exclude useless files">
+      <option name="closed" value="true" />
+      <created>1702509787021</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702509787021</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +197,7 @@
     <MESSAGE value="Order service - Implementing the n-tier architecture" />
     <MESSAGE value="Order service - Defining other service url" />
     <MESSAGE value="Order service - Implement web clients to connect to product and user services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Order service - Implement web clients to connect to product and user services" />
+    <MESSAGE value="Exclude useless files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exclude useless files" />
   </component>
 </project>
