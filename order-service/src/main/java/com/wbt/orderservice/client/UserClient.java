@@ -3,6 +3,7 @@ package com.wbt.orderservice.client;
 import com.wbt.orderservice.dto.user.UserDto;
 import com.wbt.orderservice.dto.user.UserTransactionRequestDto;
 import com.wbt.orderservice.dto.user.UserTransactionResponseDto;
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -13,6 +14,7 @@ public record UserClient(@Value("${user.service.url}") String url) {
 
     private static WebClient webClient;
 
+    @PostConstruct
     public WebClient getWebClient() {
         return webClient = WebClient.builder().baseUrl(url).build();
     }

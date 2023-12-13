@@ -2,4 +2,4 @@ server:
   port: 8083
 
 product.service.url: http://localhost:8081/products
-user.service.url: http://localhost:8082/
+user.service.url: http://localhost:8082

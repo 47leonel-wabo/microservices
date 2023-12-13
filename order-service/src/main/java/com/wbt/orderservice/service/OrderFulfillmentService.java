@@ -11,11 +11,12 @@ import com.wbt.orderservice.entity.PurchaseOrder;
 import com.wbt.orderservice.repository.OrderRepository;
 import com.wbt.orderservice.util.OrderStatus;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
 
 @Service
-public record OrderFullfilmentService(ProductClient productClient, UserClient userClient,
+public record OrderFulfillmentService(ProductClient productClient, UserClient userClient,
                                       OrderRepository orderRepository) {
 
     public Mono<OrderResponseDto> processOrder(final Mono<OrderRequestDto> orderRequestDtoMono) {
@@ -64,6 +65,18 @@ public record OrderFullfilmentService(ProductClient productClient, UserClient us
                 context.getTransactionResponseDto().amount(),
                 context.getTransactionResponseDto().status().equals(TransactionStatus.APPROVED) ? OrderStatus.COMPLETED : OrderStatus.FAILED
         );
+    }
+
+    public Flux<OrderResponseDto> findUserOrders(final Long userId) {
+        // calling to the database via jpa is a blocking operation, so must be done into pipeline
+        return Flux.fromStream(this.orderRepository.findByUserId(userId).stream())
+                .map(purchaseOrder -> new OrderResponseDto(
+                        purchaseOrder.getId(),
+                        purchaseOrder.getUserId(),
+                        purchaseOrder.getProductId(),
+                        purchaseOrder.getAmount(),
+                        purchaseOrder.getStatus()))
+                .subscribeOn(Schedulers.boundedElastic()); // (ESSENTIAL) reactively retrieve data
     }
 
 }
