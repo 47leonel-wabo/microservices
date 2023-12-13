@@ -14,6 +14,9 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
+import reactor.util.retry.Retry;
+
+import java.time.Duration;
 
 @Service
 public record OrderFulfillmentService(ProductClient productClient, UserClient userClient,
@@ -42,6 +45,8 @@ public record OrderFulfillmentService(ProductClient productClient, UserClient us
     private Mono<RequestContext> callProductService(final RequestContext context) {
         return this.productClient.getProductById(context.orderRequestDto().productId())
                 .doOnNext(context::setProductResponseDto)
+                // RESILIENT - If any issue contacting the product service, retry 5 times each 1s
+                .retryWhen(Retry.fixedDelay(5, Duration.ofSeconds(1)))
                 .thenReturn(context);
     }
 
