@@ -1,5 +1,9 @@
 # Reactive Microservices with Spring Boot 3.2.x
 
+## Description
+
+Spring Boot project constituted of three services, in which two are builded on reactive stack (user-service and product-service) and one builded on traditional web stack (order-service). Look at the figure below.
+
 ## Services
 
 - Product service (reactive web, reactive mongodb)
