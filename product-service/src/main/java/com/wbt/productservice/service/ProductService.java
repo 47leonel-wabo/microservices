@@ -9,9 +9,12 @@ import org.springframework.data.domain.Range;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.core.publisher.Sinks;
 
 @Service
-public record ProductService(ProductRepository productRepository) {
+public record ProductService(
+        ProductRepository productRepository,
+        Sinks.Many<ProductResponseDto> productSink) {
 
     public Flux<ProductResponseDto> getAllProducts() {
         return this.productRepository
@@ -25,10 +28,16 @@ public record ProductService(ProductRepository productRepository) {
                 .map(EntityToDto::toProductResponseDto);
     }
 
+    /**
+     * @param productRequestDto this DTO represents craft of object to be persisted
+     * @return Mono of ProductResponseDto which represents a craft of saved object
+     * This method also emit an event to notify the frontend UI about the newly saved product
+     */
     public Mono<ProductResponseDto> addProduct(final Mono<ProductRequestDto> productRequestDto) {
         return productRequestDto
                 .flatMap(requestDto -> this.productRepository.save(EntityToDto.toProductEntity(requestDto)))
-                .map(EntityToDto::toProductResponseDto);
+                .map(EntityToDto::toProductResponseDto)
+                .doOnNext(this.productSink::tryEmitNext); // Server Sent Event to the frontend
     }
 
     public Mono<ProductResponseDto> updateProduct(final String productId, final Mono<ProductRequestDto> requestDto) {
