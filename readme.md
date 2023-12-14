@@ -24,6 +24,7 @@ Spring Boot project constituted of three services, in which two are builded on r
 * R2DBC
 * Java
 * Linux
+* Server Sent Event (webflux)
 
 ## Architecture
 
