@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="023be3d6-546c-4a60-a9dd-f27da8b30c68" name="Changes" comment="Exclude useless files" />
+    <list default="true" id="023be3d6-546c-4a60-a9dd-f27da8b30c68" name="Changes" comment="SSE - Define sink and emit product object">
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/wbt/productservice/controller/SSEController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +19,9 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
         <option value="Record" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -50,9 +56,10 @@
     "Application.OrderServiceApplication.executor": "Run",
     "Application.ProductServiceApplication.executor": "Run",
     "Application.UserServiceApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "server-sent-event",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/ddok/Documents/SP3/reactive/microservices/order-service/src/main/java/com/wbt/orderservice/dto",
@@ -67,6 +74,7 @@
       <recent name="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto/product" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/product-service/src/main/resources/static" />
       <recent name="$PROJECT_DIR$/order-service/src/main/java/com/wbt/orderservice/dto" />
     </key>
   </component>
@@ -177,7 +185,39 @@
       <option name="project" value="LOCAL" />
       <updated>1702509787021</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update readme.md file with technologies section">
+      <option name="closed" value="true" />
+      <created>1702510304191</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702510304191</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Order service handle and response error returned with the proper status code to client">
+      <option name="closed" value="true" />
+      <created>1702511375271</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702511375271</updated>
+    </task>
+    <task id="LOCAL-00009" summary="RESILIENT - retry with product service ir issue happened">
+      <option name="closed" value="true" />
+      <created>1702511828300</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702511828300</updated>
+    </task>
+    <task id="LOCAL-00010" summary="SSE - Define sink and emit product object">
+      <option name="closed" value="true" />
+      <created>1702564298900</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702564298900</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +238,10 @@
     <MESSAGE value="Order service - Defining other service url" />
     <MESSAGE value="Order service - Implement web clients to connect to product and user services" />
     <MESSAGE value="Exclude useless files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exclude useless files" />
+    <MESSAGE value="Update readme.md file with technologies section" />
+    <MESSAGE value="Order service handle and response error returned with the proper status code to client" />
+    <MESSAGE value="RESILIENT - retry with product service ir issue happened" />
+    <MESSAGE value="SSE - Define sink and emit product object" />
+    <option name="LAST_COMMIT_MESSAGE" value="SSE - Define sink and emit product object" />
   </component>
 </project>
