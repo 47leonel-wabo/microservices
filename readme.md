@@ -29,3 +29,5 @@ Spring Boot project constituted of three services, in which two are builded on r
 ## Architecture
 
 ![architecture](./screenshots/high_level_architecture.png)
+
+Happy coding ;)
